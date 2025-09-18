@@ -17,7 +17,7 @@ public class ConverterPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    // ✅ Always check popup
+    //  Always check popup
     public void dismissOldVersionPopup() {
         try {
             WebElement okBtn = wait.until(
@@ -30,7 +30,7 @@ public class ConverterPage {
         }
     }
 
-    // ✅ Celsius field
+    // Celsius field
     public void enterCelsius(String value) {
         WebElement celsiusInput = wait.until(
             ExpectedConditions.presenceOfElementLocated(
@@ -41,7 +41,7 @@ public class ConverterPage {
         celsiusInput.sendKeys(value);
     }
 
-    // ✅ Fahrenheit field
+    // Fahrenheit field
     public String getFahrenheitValue() {
         WebElement fahrenheitInput = wait.until(
             ExpectedConditions.presenceOfElementLocated(
@@ -51,7 +51,7 @@ public class ConverterPage {
         return fahrenheitInput.getText();
     }
 
-    // ✅ Buttons
+    // Buttons
     public void tapConvertCtoF() {
         wait.until(ExpectedConditions.elementToBeClickable(
             By.id("com.androiddev2015.cfconverter:id/btncnvCF")
