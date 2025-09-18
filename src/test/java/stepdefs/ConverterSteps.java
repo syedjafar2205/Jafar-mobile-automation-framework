@@ -21,7 +21,7 @@ public class ConverterSteps {
         this.driver = (AndroidDriver) DriverFactory.getDriver();
     }
 
-    // ✅ Handle popup if present
+    // Handle popup if present
     private void dismissOldVersionPopup() {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
